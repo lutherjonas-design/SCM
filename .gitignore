@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Django
+/static/
+media/
+
+# Docker
+*.env
+pgdata/
+*.log
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Virtualenv (if any)
+venv/
