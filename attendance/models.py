@@ -81,7 +81,6 @@ class Attendance(models.Model):
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
     event = models.ForeignKey(CourseEvent, on_delete=models.CASCADE)
     sick = models.BooleanField(default=False)
-    recorded_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f"{self.student} - {self.event} ({'Sick' if self.sick else 'Present'})"
