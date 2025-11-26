@@ -1,0 +1,6 @@
+# Ignore local-only files
+.vscode/
+*.code-workspace
+.git/
+.gitignore
+pgdata/
