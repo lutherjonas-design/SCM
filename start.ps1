@@ -1,9 +1,22 @@
 if (-not $PSScriptRoot) {
-    throw "Skriptpfad konnte nicht ermittelt werden."
+    throw "path to script root could not be determined."
 }
 Set-Location $PSScriptRoot
 
 Start-Process "code" -ArgumentList "attendance.code-workspace" -WindowStyle Hidden
+
+
+$process = Get-Process -Name "Docker Desktop" -ErrorAction SilentlyContinue
+if ($null -eq $process) {
+    Write-Host "Docker Desktop is not running. Starting now..."
+    Start-Process "C:\Program Files\Docker\Docker\Docker Desktop.exe"
+    do {
+        Start-Sleep -Seconds 5
+        $ready = docker info 2>$null
+    } until ($ready)
+    Write-Host "Docker is ready!"
+}
+else { Write-Host "Docker Desktop is already running." }
 
 $containers = @("attendance-web-1", "attendance-db-1")
 $running = docker ps --format "{{.Names}}"
@@ -15,4 +28,5 @@ else {
     docker-compose up -d
 }
 Start-Process "powershell.exe" -ArgumentList "-NoExit", "-Command Set-Location '$PSScriptRoot'"
-Read-Host "press enter to exit"
+Write-Host "Will close in 10 seconds..."
+Start-Sleep -Seconds 10
