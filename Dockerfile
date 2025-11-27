@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /backend
 
 COPY backend/requirements.txt /backend/requirements.txt
-RUN pip install --upgrade pip && pip install -r /backend/requirements.txt
+RUN pip install --upgrade pip && pip install --no-cache-dir -r /backend/requirements.txt
 
 COPY backend /backend
 
