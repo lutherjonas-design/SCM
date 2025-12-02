@@ -1,4 +1,4 @@
-.docx
+*.docx
 
 # Python
 __pycache__/
