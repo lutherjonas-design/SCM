@@ -3,7 +3,7 @@ if (-not $PSScriptRoot) {
 }
 Set-Location $PSScriptRoot
 
-Start-Process "code" -ArgumentList "attendance.code-workspace" -WindowStyle Hidden
+Start-Process "code" -ArgumentList "SCM.code-workspace" -WindowStyle Hidden
 
 
 $process = Get-Process -Name "Docker Desktop" -ErrorAction SilentlyContinue
