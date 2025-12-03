@@ -28,6 +28,11 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <div>
+        <h2>Welcome to SCM Attendance Management System</h2>
+        <div>Welcome to hell this is the end</div>
+        <p>Develope</p>
+      </div>
     </>
   )
 }
