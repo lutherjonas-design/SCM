@@ -3,7 +3,7 @@ services:
     # Django API
     image: scm:backend
     build: ./backend
-    command: python manage.py runserver 0.0.0.0:8000
+    #command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - ./backend:/backend
     ports:
@@ -21,7 +21,9 @@ services:
     volumes:
       - ./frontend:/app
     ports:
-      - "5173:5173"
+      - "${VITE_PORT:-5173}:5173"
+    env_file:
+      - .env
     depends_on:
       - backend
 

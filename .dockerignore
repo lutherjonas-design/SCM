@@ -5,3 +5,11 @@
 .gitignore
 pgdata/
 *.ps1
+
+
+node_modules/
+dist/
+.git/
+.DS_Store
+npm-debug.log*
+yarn-error.log*
