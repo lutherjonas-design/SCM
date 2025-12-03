@@ -1,9 +1,11 @@
 services:
-  web:
-    build: .
-    command: python manage.py runserver 0.0.0.0:8000
+  backend:
+    # Django API
+    image: scm:backend
+    build: ./backend
+    #command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/backend
+      - ./backend:/backend
     ports:
       - "8000:8000"
     depends_on:
@@ -11,8 +13,24 @@ services:
     env_file:
       - .env
 
+  frontend:
+    # Vite + React Frontend
+    image: scm:frontend
+    build: ./frontend
+    #command: npm run dev
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "${VITE_PORT:-5173}:5173"
+    env_file:
+      - .env
+    depends_on:
+      - backend
+
   db:
-    image: postgres:15
+    # PostgreSQL Database
+    image: scm:db
+    build: ./db
     env_file:
       - .env
     ports:
