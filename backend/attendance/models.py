@@ -78,8 +78,8 @@ class CourseEvent(models.Model):
 
 
 class Attendance(models.Model):
-    student = models.ForeignKey(Student, on_delete=models.CASCADE)
     event = models.ForeignKey(CourseEvent, on_delete=models.CASCADE)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
     sick = models.BooleanField(default=False)
 
     def __str__(self):
