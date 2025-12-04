@@ -30,8 +30,7 @@ function App() {
       </p>
       <div>
         <h2>Welcome to SCM Attendance Management System</h2>
-        <div>Welcome to hell this is the end</div>
-        <p>Develope</p>
+        <div> to hell is the end</div>
       </div>
     </>
   )
