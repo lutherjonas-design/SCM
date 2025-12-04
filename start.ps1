@@ -5,6 +5,12 @@ Set-Location $PSScriptRoot
 
 Start-Process "code" -ArgumentList "SCM.code-workspace" -WindowStyle Hidden
 
+$process = Get-Process -Name "msedge" -ErrorAction SilentlyContinue
+if ( $null -eq $process) {
+    Write-Host "Microsoft Edge is not running. Starting now..."
+    Start-Process microsoft-edge:
+}
+else { Write-Host "Microsoft Edge is already running." }
 
 $process = Get-Process -Name "Docker Desktop" -ErrorAction SilentlyContinue
 if ($null -eq $process) {
