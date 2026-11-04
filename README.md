@@ -2,10 +2,10 @@
 
 ---
 
-### ⚠️ **Project Status: Paused (Architectural Case Study on System Complexity)**  
+### ⚠️ **Context & Status: Paused (Architectural Case Study on System Complexity)**  
 This project was explicitly designed as a learning environment to explore Django's ORM capabilities and relational database design. It was intentionally paused after reaching a structural tipping point.
 
-### 🛠️ Tech Stack & Scaffolding
+### 🛠️ Tech Stack
 * **Framework:** Python, Django
 * **Infrastructure:** Docker-ready core, localized setup scripts (`start.ps1`)
 * **Configuration:** Strict environment separation via `.env` guidelines
