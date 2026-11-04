@@ -1,7 +1,5 @@
 # Attendance Tracking (Sportclub)
-
 ---
-
 ### ⚠️ **Context & Status: Paused (Architectural Case Study on System Complexity)**  
 This project was explicitly designed as a learning environment to explore Django's ORM capabilities and relational database design. It was intentionally paused after reaching a structural tipping point.
 
