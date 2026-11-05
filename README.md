@@ -7,7 +7,7 @@ This project was designed as a learning environment to explore Django's ORM capa
 * **Infrastructure:** Docker-ready core, localized setup scripts (`start.ps1`)
 * **Configuration:** Strict environment separation via `.env` guidelines
 
-## Key Architectural Insights & Takeaways
+## Key Takeaways & Lessons Learned
 
 * **The Trap of Over-Engineering:** The initial data modeling led to a database schema with ~20 tables and a lot of containers. This complexity showed feature creep and that the architecture had become too ambiguous and heavy for a first learning project and missing pattern knowledge.
 * **Shift to Component Quality:** Rather than writing repetitive code for an over-complicated system, this project forced me to pivot. I shifted my focus entirely toward smaller Projects, that offered me a more targeted learning environment.
